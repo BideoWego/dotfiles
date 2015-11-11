@@ -17,15 +17,12 @@ alias documents='cd ~/Documents'
 # Apps
 #--------------------------------------------------------
 
-alias preview='open -a preview'
-
-alias phpstorm='open -a phpstorm'
-alias xcode='open -a xcode'
-
-alias safari='open -a safari'
-alias firefox='open -a firefox'
 alias chrome='open -a google\ chrome.app'
+alias firefox='open -a firefox'
 alias opera='open -a opera'
+alias preview='open -a preview'
+alias safari='open -a safari'
+alias xcode='open -a xcode'
 
 #--------------------------------------------------------
 # Command Shorthands
