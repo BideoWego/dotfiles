@@ -20,3 +20,5 @@
 !.git-prompt.sh
 !.gitignore
 !.gitignore_global
+
+!README.md
