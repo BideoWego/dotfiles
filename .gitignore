@@ -1,0 +1,22 @@
+# ----------------------------------------
+# Ignore Everything by Default
+# ----------------------------------------
+
+*
+
+# ----------------------------------------
+# Tracked Files and Directories
+# ----------------------------------------
+
+!/.bash/
+!/.bash/*
+!.bash_logout
+!.bash_profile
+!.bashrc
+
+!.gemrc
+
+!.git-completion.sh
+!.git-prompt.sh
+!.gitignore
+!.gitignore_global
