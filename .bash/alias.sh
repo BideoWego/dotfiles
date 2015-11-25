@@ -28,7 +28,7 @@ alias xcode='open -a xcode'
 # Command Shorthands
 #--------------------------------------------------------
 
-alias ll='ls -lahG'
+alias ll='ls -lahGF'
 alias c='clear'
 alias h='history'
 
@@ -50,6 +50,7 @@ alias mkdir='mkdir -p'
 alias pg='postgres -D /usr/local/var/postgres'
 alias github='open https://github.com'
 alias bitbucket='open https://bitbucket.org'
+alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; echo "DNS Flushed";'
 
 
 
