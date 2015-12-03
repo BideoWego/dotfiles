@@ -11,7 +11,6 @@ function trash() {
 		echo 'Nothing moved to trash, please pass a file or directory to send to Trash'
 	fi
 } 
-
 alias trash='trash'
 
 # ----
@@ -23,6 +22,7 @@ function addpath() {
 		echo "Please provide a path to add, in addpath()."
 	fi
 }
+alias addpath='addpath'
 
 # ----
 
@@ -33,6 +33,7 @@ function localhost {
   fi
   open "http://localhost:$PORT"
 }
+alias localhost='localhost'
 
 # ----
 
@@ -51,4 +52,4 @@ function githome {
     echo "Please specify 'enable' or 'disable'"
   fi
 }
-
+alias githome='githome'
