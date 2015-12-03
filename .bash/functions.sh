@@ -14,7 +14,7 @@ function trash() {
 
 alias trash='trash'
 
-# --- 
+# ----
 
 function addpath() {
 	if [ $1 ]; then
@@ -23,3 +23,32 @@ function addpath() {
 		echo "Please provide a path to add, in addpath()."
 	fi
 }
+
+# ----
+
+function localhost {
+  PORT='3000'
+  if [ $1 ]; then
+    PORT="$1"
+  fi
+  open "http://localhost:$PORT"
+}
+
+# ----
+
+function githome {
+  if [ $1 ]; then
+    if [ $1 == 'disable' ]; then
+      mv ~/.git ~/.git_
+      mv ~/.gitignore ~/.gitignore_
+    elif [ $1 == 'enable' ]; then
+      mv ~/.git_ ~/.git
+      mv ~/.gitignore_ ~/.gitignore
+    else
+      echo "Unrecognized argument value $1, please specify 'enable' or 'disable'"
+    fi
+  else
+    echo "Please specify 'enable' or 'disable'"
+  fi
+}
+
