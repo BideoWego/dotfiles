@@ -5,6 +5,9 @@
 MYNAME='Chris Scavello'
 export MYNAME
 
+# editor
+export EDITOR='subl -w'
+
 # rbenv
 if which rbenv > /dev/null; then
 	eval "$(rbenv init -)"
