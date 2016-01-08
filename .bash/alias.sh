@@ -51,6 +51,7 @@ alias pg='postgres -D /usr/local/var/postgres'
 alias github='open https://github.com'
 alias bitbucket='open https://bitbucket.org'
 alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; echo "DNS Flushed";'
+alias sassw='sass --watch assets/stylesheets/scss:assets/stylesheets/css --no-cache'
 
 
 
