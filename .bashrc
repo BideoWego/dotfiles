@@ -13,3 +13,4 @@ source ~/.bash/env.sh
 source ~/.bash/prompt.sh
 source ~/.bash/alias.sh
 source ~/.bash/git.sh
+
