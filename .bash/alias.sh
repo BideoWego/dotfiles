@@ -17,11 +17,11 @@ alias documents='cd ~/Documents'
 # Apps
 #--------------------------------------------------------
 
+alias safari='open -a safari'
 alias chrome='open -a google\ chrome.app'
 alias firefox='open -a firefox'
 alias opera='open -a opera'
 alias preview='open -a preview'
-alias safari='open -a safari'
 alias xcode='open -a xcode'
 
 #--------------------------------------------------------
@@ -39,9 +39,10 @@ alias h='history'
 alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
+alias rm!='sudo rm'
 alias df='df -h'
 alias du='df -h'
-alias mkdir='mkdir -p'
+alias mkdir='mkdir -v -p'
 
 #========================================================
 # Misc Aliases
