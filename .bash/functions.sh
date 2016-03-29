@@ -108,9 +108,9 @@ alias githome='githome'
 function search {
   if [ $1 ]; then
     if [ $2 ]; then
-      egrep -r $1 $2
+      egrep -n -r $1 $2
     else
-      egrep -r $1 .
+      egrep -n -r $1 .
     fi
   else
     echo "Please provide a search string"
