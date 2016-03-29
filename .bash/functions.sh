@@ -2,7 +2,9 @@
 # Functions
 #========================================================
 
-# ---- 
+# ----------------------------------------
+# trash
+# ----------------------------------------
 
 function trash() {
 	if [ $1 ]; then
@@ -13,7 +15,9 @@ function trash() {
 } 
 alias trash='trash'
 
-# ----
+# ----------------------------------------
+# addpath
+# ----------------------------------------
 
 function addpath() {
 	if [ $1 ]; then
@@ -24,7 +28,9 @@ function addpath() {
 }
 alias addpath='addpath'
 
-# ----
+# ----------------------------------------
+# localhost
+# ----------------------------------------
 
 function localhost {
   PORT='3000'
@@ -35,7 +41,48 @@ function localhost {
 }
 alias localhost='localhost'
 
-# ----
+# ----------------------------------------
+# rubyserve
+# ----------------------------------------
+
+function rubyserve {
+  PORT='3000'
+  if [ $1 ]; then
+    PORT="$1"
+  fi
+  ruby -run -e httpd . -p $PORT
+}
+alias rubyserve='rubyserve'
+
+# ----------------------------------------
+# phpserve
+# ----------------------------------------
+
+function phpserve {
+  PORT='3000'
+  if [ $1 ]; then
+    PORT="$1"
+  fi
+  php -S localhost:$PORT
+}
+alias phpserve='phpserve'
+
+# ----------------------------------------
+# pythonserve
+# ----------------------------------------
+
+function pythonserve {
+  PORT='3000'
+  if [ $1 ]; then
+    PORT="$1"
+  fi
+  python -m SimpleHTTPServer $PORT
+}
+alias pythonserve='pythonserve'
+
+# ----------------------------------------
+# githome
+# ----------------------------------------
 
 function githome {
   if [ $1 ]; then
@@ -53,3 +100,28 @@ function githome {
   fi
 }
 alias githome='githome'
+
+# ----------------------------------------
+# search
+# ----------------------------------------
+
+function search {
+  if [ $1 ]; then
+    if [ $2 ]; then
+      egrep -r $1 $2
+    else
+      egrep -r $1 .
+    fi
+  else
+    echo "Please provide a search string"
+  fi
+}
+alias search="search"
+alias s="search"
+
+
+
+
+
+
+
