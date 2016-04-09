@@ -119,7 +119,18 @@ function search {
 alias search="search"
 alias s="search"
 
+# ----------------------------------------
+# process grep
+# ----------------------------------------
 
+function psag {
+  if [ $1 ]; then
+    ps aux | grep $1
+  else
+    echo "Please provide a search string"
+  fi
+}
+alias psag="psag"
 
 
 
