@@ -2,11 +2,10 @@
 # Environment Variables
 #========================================================
 
-MYNAME='Chris Scavello'
-export MYNAME
-
 # editor
-export EDITOR='subl -w'
+if which subl > /dev/null; then
+  export EDITOR='subl -w'
+fi
 
 # rbenv
 if which rbenv > /dev/null; then
@@ -19,16 +18,24 @@ if which pyenv > /dev/null; then
 fi
 
 # nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+if which brew > /dev/null; then
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
+fi 
 
 # composer
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+if [ -d ~/.composer ]; then
+  export PATH="$PATH:$HOME/.composer/vendor/bin"
+fi
 
 # grunt
-eval "$(grunt --completion=bash)"
+if which grunt > /dev/null; then
+  eval "$(grunt --completion=bash)"
+fi
 
 # travis-ci
-source ~/.travisrc
+if [ -f ~/.travisrc ]; then
+  source ~/.travisrc
+fi
 
 

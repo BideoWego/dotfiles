@@ -18,3 +18,4 @@
 
 export GREP_COLOR="1;37"
 export GREP_OPTIONS="--color=auto"
+

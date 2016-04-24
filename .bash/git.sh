@@ -2,12 +2,13 @@
 # Git Auto Completion
 #========================================================
 
-source ~/.git-completion.sh
+if [ -f ~/.git-completion.sh ]; then
+  source ~/.git-completion.sh
+fi
 
 #========================================================
 # Git PS1 Prompt
 #========================================================
-source ~/.git-prompt.sh
 
 if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
   # Git prompt
@@ -28,8 +29,14 @@ if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
   # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
   source ~/.bash-git-prompt/gitprompt.sh
 else
+
+  if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
+    echo "Using default Git prompt at ~/.git-prompt.sh"
+    echo
+  fi
+
   echo "~/.bash-git-prompt/gitprompt.sh doesn't exist in ~ directory"
-  echo "Using default Git prompt at ~/.git-prompt.sh"
   echo "Consider using magicmonty/bash-git-prompt for your Git prompt"
   echo "Download to your home directory from here: "
   echo "  https://github.com/magicmonty/bash-git-prompt"
@@ -37,3 +44,4 @@ else
   echo "Configuration variables can be set in ~/.bash/git.sh"
   echo
 fi
+
