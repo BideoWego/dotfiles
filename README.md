@@ -69,9 +69,17 @@ The result is an organized method to version control your `~` folder dotfiles.
 
 Enjoy!
 
-
+## License
 
 This software is offered under the MIT License.
+
+
+## 
+
+TODO: Make into Git plugin
+- [Create a Git Plugin 1](https://adamcod.es/2013/07/12/how-to-create-git-plugin.html)
+- [Create a Git Plugin 2](https://adamcod.es/2013/07/19/how-to-create-git-plugin-part2.html)
+- [Extend Git](http://blogs.atlassian.com/2013/04/extending-git/)
 
 
 
