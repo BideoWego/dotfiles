@@ -24,3 +24,11 @@ source $(brew --prefix nvm)/nvm.sh
 
 # composer
 export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+# grunt
+eval "$(grunt --completion=bash)"
+
+# travis-ci
+source ~/.travisrc
+
+
