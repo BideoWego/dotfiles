@@ -21,7 +21,7 @@ fi
 if which brew > /dev/null; then
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
-fi 
+fi
 
 # composer
 if [ -d ~/.composer ]; then
@@ -38,4 +38,7 @@ if [ -f ~/.travisrc ]; then
   source ~/.travisrc
 fi
 
-
+# $NODE_PATH
+if which node > /dev/null; then
+  export NODE_PATH='/usr/local/lib/node_modules'
+fi
