@@ -60,5 +60,6 @@ alias rmds_store="find . -name '*.DS_Store' -type f -delete"
 alias sassw='sass --watch assets/stylesheets/scss:assets/stylesheets/css --no-cache'
 alias mg="mongod --port 27017 --dbpath /usr/local/var/mongodb"
 alias redis="redis-server /usr/local/etc/redis.conf"
+alias subl='subl -n'
 
 
