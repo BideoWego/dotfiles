@@ -58,5 +58,7 @@ alias pivotaltracker='open https://www.pivotaltracker.com/dashboard'
 alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; echo "DNS Flushed";'
 alias rmds_store="find . -name '*.DS_Store' -type f -delete"
 alias sassw='sass --watch assets/stylesheets/scss:assets/stylesheets/css --no-cache'
+alias mg="mongod --port 27017 --dbpath /usr/local/var/mongodb"
+alias redis="redis-server /usr/local/etc/redis.conf"
 
 
