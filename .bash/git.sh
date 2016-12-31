@@ -10,7 +10,12 @@ fi
 # Git PS1 Prompt
 #========================================================
 
-if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
+
+
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+  
   # Git prompt
   # https://github.com/magicmonty/bash-git-prompt
   # gitprompt configuration
@@ -23,11 +28,6 @@ if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
   # GIT_PROMPT_END=...      # uncomment for custom prompt end sequence
   GIT_PROMPT_START="_LAST_COMMAND_INDICATOR_ $COLOR_OPEN \W $COLOR_CLOSE"
   GIT_PROMPT_END=" \$ "
-
-  # as last entry source the gitprompt script
-  # GIT_PROMPT_THEME=Custom # use custom .git-prompt-colors.sh
-  # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
-  source ~/.bash-git-prompt/gitprompt.sh
 else
 
   if [ -f ~/.git-prompt.sh ]; then
