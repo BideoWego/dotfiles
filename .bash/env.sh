@@ -18,7 +18,7 @@ if which pyenv > /dev/null; then
 fi
 
 # nvm
-if which brew > /dev/null && which nvm > /dev/null; then
+if which brew > /dev/null && [ -f $(brew --prefix nvm)/nvm.sh ]; then
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
 fi
