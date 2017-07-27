@@ -132,6 +132,25 @@ function psag {
 }
 alias psag="psag"
 
+# ----------------------------------------
+# redis
+# ----------------------------------------
+
+function redis {
+  NAME=""
+
+  if [ $1 ]; then
+    NAME="$1"
+  fi
+
+  redis-server /usr/local/etc/redis/${NAME}.conf
+}
+alias redis="redis"
+
+
+
+
+
 
 
 
