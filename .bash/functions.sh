@@ -137,7 +137,7 @@ alias psag="psag"
 # ----------------------------------------
 
 function redis {
-  NAME=""
+  NAME="default"
 
   if [ $1 ]; then
     NAME="$1"
