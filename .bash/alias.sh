@@ -79,6 +79,7 @@ alias googledocs='open https://docs.google.com/document'
 alias googlemail='open https://mail.google.com/mail'
 alias gmail='open https://mail.google.com/mail'
 alias vcs='open https://www.vikingcodeschool.com'
+alias rspecchecklist='open https://gist.github.com/BideoWego/973df3cf566b99513da8'
 
 
 # ----------------------------------------
