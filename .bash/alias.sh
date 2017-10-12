@@ -56,7 +56,6 @@ alias mkdir='mkdir -v -p'
 
 alias pg='postgres -D /usr/local/var/postgres'
 alias mg="mongod --port 27017 --dbpath /usr/local/var/mongodb"
-alias redis="redis-server /usr/local/etc/redis.conf"
 
 
 # ----------------------------------------

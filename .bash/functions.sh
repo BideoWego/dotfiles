@@ -12,7 +12,7 @@ function trash() {
 	else
 		echo 'Nothing moved to trash, please pass a file or directory to send to Trash'
 	fi
-} 
+}
 alias trash='trash'
 
 # ----------------------------------------
@@ -137,15 +137,71 @@ alias psag="psag"
 # ----------------------------------------
 
 function redis {
-  NAME="default"
+  unset NAME
 
-  if [ $1 ]; then
+  if [ $1 ] && [ -f /usr/local/etc/redis/$1.conf ]; then
     NAME="$1"
+  elif [ $1 ]; then
+    echo "File does not exist: $1"
+  else
+    NAME="default"
   fi
 
-  redis-server /usr/local/etc/redis/${NAME}.conf
+  if [ ! -z "$NAME" ]; then
+    CONFIG=/usr/local/etc/redis/${NAME}.conf
+    echo "Starting up redis with config file: $CONFIG"
+    echo
+    redis-server "$CONFIG"
+  fi
 }
 alias redis="redis"
+
+
+# ----------------------------------------
+# redisconfcreate
+# ----------------------------------------
+
+function redisconfcreate {
+  if [ $1 ] && [ $2 ]; then
+    FILE=/usr/local/etc/redis/${1}.conf
+    if [ ! -f  "$FILE" ]; then
+      NAME="$1"
+      PORT="$2"
+      sed "s/^dbfilename dump.rdb$/dbfilename $NAME.rdb/" /usr/local/etc/redis.conf > "$FILE"
+      sed -i '' "s/^port 6379$/port $PORT/" "$FILE"
+
+      echo "Created new redis conf file: $FILE"
+      echo "  with port: $PORT"
+      echo "  and dbfilename: $NAME.rdb"
+    else
+      echo "File already exists: $FILE"
+    fi
+  else
+    echo "Please provide the following arguments:"
+    echo "  a name for the new config file"
+    echo "  a port number that is above 6379"
+  fi
+}
+alias redisconfcreate="redisconfcreate"
+
+
+# ----------------------------------------
+# redisconflist
+# ----------------------------------------
+
+function redisconflist {
+  for f in /usr/local/etc/redis/*
+  do
+    echo "$f"
+    cat $f | egrep ^dbfilename
+    cat $f | egrep ^port
+    echo
+  done
+}
+alias redisconflist="redisconflist"
+
+
+
 
 
 
