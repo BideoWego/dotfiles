@@ -137,7 +137,7 @@ alias psag="psag"
 # ----------------------------------------
 
 function redis {
-  unset NAME
+  NAME=""
 
   if [ $1 ] && [ -f /usr/local/etc/redis/$1.conf ]; then
     NAME="$1"
@@ -200,6 +200,31 @@ function redisconflist {
 }
 alias redisconflist="redisconflist"
 
+
+# ----------------------------------------
+# rediscli
+# ----------------------------------------
+
+function rediscli {
+  if [ $1 ]; then
+    CONFIG=/usr/local/etc/redis/$1.conf
+    TEXT=$(cat $CONFIG)
+    REGEX="port[[:space:]]([0-9]{4})"
+
+    if [[ $TEXT =~ $REGEX ]]; then
+      PORT=${BASH_REMATCH[1]}
+      echo "Starting Redis CLI"
+      echo "  with config: $CONFIG"
+      echo "  on port: $PORT"
+      echo
+      redis-cli -p "$PORT"
+    else
+      echo "Unable to resolve port in config file $1"
+    fi
+  else
+    "Please provide a config file name for the redis instance of the CLI"
+  fi
+}
 
 
 
