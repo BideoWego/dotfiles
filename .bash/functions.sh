@@ -206,8 +206,16 @@ alias redisconflist="redisconflist"
 # ----------------------------------------
 
 function rediscli {
+  FILE="default"
+  CONFIG=/usr/local/etc/redis/default.conf
+
   if [ $1 ]; then
-    CONFIG=/usr/local/etc/redis/$1.conf
+    FILE=$1
+  fi
+
+  CONFIG=/usr/local/etc/redis/$FILE.conf
+
+  if [ -f "$CONFIG" ]; then
     TEXT=$(cat $CONFIG)
     REGEX="port[[:space:]]([0-9]{4})"
 
@@ -222,7 +230,7 @@ function rediscli {
       echo "Unable to resolve port in config file $1"
     fi
   else
-    "Please provide a config file name for the redis instance of the CLI"
+    echo "Config file does not exist: $CONFIG"
   fi
 }
 
