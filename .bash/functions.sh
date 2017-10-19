@@ -233,6 +233,7 @@ function rediscli {
     echo "Config file does not exist: $CONFIG"
   fi
 }
+alias rediscli="rediscli"
 
 
 

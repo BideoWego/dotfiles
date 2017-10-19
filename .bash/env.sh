@@ -42,3 +42,10 @@ fi
 if which node > /dev/null; then
   export NODE_PATH='/usr/local/lib/node_modules'
 fi
+
+# exercism
+if [ -f ~/.config/exercism/exercism_completion.bash ]; then
+  . ~/.config/exercism/exercism_completion.bash
+fi
+
+
