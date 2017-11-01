@@ -40,7 +40,7 @@ fi
 
 # $NODE_PATH
 if which node > /dev/null; then
-  export NODE_PATH='/usr/local/lib/node_modules'
+  export NODE_PATH=$(npm -g root)
 fi
 
 # exercism

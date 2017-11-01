@@ -116,8 +116,8 @@ function search {
     echo "Please provide a search string"
   fi
 }
-alias search="search"
-alias s="search"
+alias search='search'
+alias s='search'
 
 # ----------------------------------------
 # process grep
@@ -130,7 +130,7 @@ function psag {
     echo "Please provide a search string"
   fi
 }
-alias psag="psag"
+alias psag='psag'
 
 # ----------------------------------------
 # redis
@@ -154,7 +154,7 @@ function redis {
     redis-server "$CONFIG"
   fi
 }
-alias redis="redis"
+alias redis='redis'
 
 
 # ----------------------------------------
@@ -182,7 +182,7 @@ function redisconfcreate {
     echo "  a port number that is above 6379"
   fi
 }
-alias redisconfcreate="redisconfcreate"
+alias redisconfcreate='redisconfcreate'
 
 
 # ----------------------------------------
@@ -198,7 +198,7 @@ function redisconflist {
     echo
   done
 }
-alias redisconflist="redisconflist"
+alias redisconflist='redisconflist'
 
 
 # ----------------------------------------
@@ -233,7 +233,12 @@ function rediscli {
     echo "Config file does not exist: $CONFIG"
   fi
 }
-alias rediscli="rediscli"
+alias rediscli='rediscli'
+
+
+
+
+
 
 
 
