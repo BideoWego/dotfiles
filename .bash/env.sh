@@ -23,6 +23,11 @@ if which brew > /dev/null && [ -f $(brew --prefix nvm)/nvm.sh ]; then
   source $(brew --prefix nvm)/nvm.sh
 fi
 
+# php-version
+if which brew > /dev/null && [ -f $(brew --prefix php-version)/php-version.sh ]; then
+  source $(brew --prefix php-version)/php-version.sh && php-version 5
+fi
+
 # composer
 if [ -d ~/.composer ]; then
   export PATH="$PATH:$HOME/.composer/vendor/bin"
