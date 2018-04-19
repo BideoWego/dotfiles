@@ -23,9 +23,11 @@ if which brew > /dev/null && [ -f $(brew --prefix nvm)/nvm.sh ]; then
   source $(brew --prefix nvm)/nvm.sh
 fi
 
-# php-version
-if which brew > /dev/null && [ -f $(brew --prefix php-version)/php-version.sh ]; then
-  source $(brew --prefix php-version)/php-version.sh && php-version 5
+# phpbrew
+if which phpbrew > /dev/null; then
+  source /Users/christopherscavello/.phpbrew/bashrc
+  export PHPBREW_SET_PROMPT=1
+  export PHPBREW_RC_ENABLE=1
 fi
 
 # composer
