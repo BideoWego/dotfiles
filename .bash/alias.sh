@@ -46,7 +46,7 @@ alias rm!='sudo rm'
 alias rmdir='rm -iR'
 alias rmdir!='sudo rm -R'
 alias df='df -h'
-alias du='df -h'
+alias du='du -h'
 alias mkdir='mkdir -v -p'
 
 
