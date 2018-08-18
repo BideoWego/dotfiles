@@ -55,4 +55,9 @@ if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   . ~/.config/exercism/exercism_completion.bash
 fi
 
+# docker
+if which docker > /dev/null && [ -f ~/.my-docker-config.sh ]; then
+  . ~/.my-docker-config.sh
+fi
+
 
