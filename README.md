@@ -12,7 +12,7 @@ Without my dot files Github repository, I am useless.
 
 There's no place like `~`.
 
-by [Bideo Wego](https://github/com/BideoWego)
+by [Bideo Wego](https://github.com/BideoWego)
 
 
 
