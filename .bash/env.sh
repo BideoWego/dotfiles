@@ -2,6 +2,11 @@
 # Environment Variables
 #========================================================
 
+# ruby/rails
+if which ruby > /dev/null; then
+  export RUBYOPT='-W0'
+fi
+
 # editor
 if which subl > /dev/null; then
   export EDITOR='subl -w'
