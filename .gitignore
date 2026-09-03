@@ -19,7 +19,10 @@
 
 !.git-completion.sh
 !.git-prompt.sh
+!.gitconfig
 !.gitignore
 !.gitignore_global
+
+!.zprofile
 
 !README.md

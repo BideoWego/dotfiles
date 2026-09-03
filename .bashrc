@@ -5,6 +5,7 @@ echo 'Hello Bideo Wego!'
 echo
 
 source ~/.bash/functions.sh
+source ~/.bash/sleep.sh
 
 source ~/.bash/path.sh
 source ~/.bash/grep.sh
