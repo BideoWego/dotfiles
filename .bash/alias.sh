@@ -12,6 +12,8 @@ alias home='cd ~'
 alias apps='cd ~/Applications'
 alias desktop='cd ~/Desktop'
 alias documents='cd ~/Documents'
+alias cdmylyrics='cd ~/Code-Projects/my_lyrics'
+alias cdsj84='cd ~/SJ84/__WEBSITE__/scarejude84.com'
 
 
 # #--------------------------------------------------------

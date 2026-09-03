@@ -23,10 +23,12 @@ fi
 # fi
 
 # # nvm
-# if which brew > /dev/null && [ -f $(brew --prefix nvm)/nvm.sh ]; then
-#   export NVM_DIR=~/.nvm
-#   source $(brew --prefix nvm)/nvm.sh
-# fi
+if which brew > /dev/null && [ -f $(brew --prefix nvm)/nvm.sh ]; then
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
+  nvm alias default v24.14.0
+  nvm use default
+fi
 
 # # phpbrew
 # if which phpbrew > /dev/null; then
